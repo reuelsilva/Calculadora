@@ -31,7 +31,7 @@ public class Calculadora extends JFrame{
         "4", "5", "6", "-", 
         "1", "2", "3", "x",
         "0", "backspace", "=", "/"};
-    Icon backspaceIcon = new ImageIcon("figuras/6861760.png");
+    Icon backspaceIcon = new ImageIcon("figuras/backspace-figura.png");
     private int valor1, valor2;
     private String operador;
     
