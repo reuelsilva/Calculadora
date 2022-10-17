@@ -40,7 +40,7 @@ public class Calculadora extends JFrame{
         container = getContentPane();
         container.setLayout(new BorderLayout());
         painelDeDisplay = new JPanel(new BorderLayout());
-        painelDeDisplay.setBorder(BorderFactory.createEmptyBorder(12, 12, 5, 12));
+        painelDeDisplay.setBorder(BorderFactory.createEmptyBorder(10, 15, 5, 15));
         container.add(painelDeDisplay, BorderLayout.NORTH);
         txtDisplay = new JTextArea(1, 12);
         txtDisplay.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
@@ -49,7 +49,7 @@ public class Calculadora extends JFrame{
         txtDisplay.setEditable(false);
         painelDeDisplay.add(txtDisplay, BorderLayout.CENTER);
         painelDeBotoes = new JPanel(new GridLayout(4, 4, 5, 5));
-        painelDeBotoes.setBorder(BorderFactory.createEmptyBorder(5, 12, 12, 12));
+        painelDeBotoes.setBorder(BorderFactory.createEmptyBorder(5, 15, 15, 15));
         container.add(painelDeBotoes, BorderLayout.CENTER);
         
         for(int pos=0; pos<botoes.length;pos++){
