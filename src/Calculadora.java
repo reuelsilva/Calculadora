@@ -11,6 +11,7 @@
 import javax.swing.JFrame;
 import java.awt.Container;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
@@ -18,9 +19,9 @@ import javax.swing.JTextArea;
 import javax.swing.JButton;
 import javax.swing.Icon;
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.ImageIcon;
         
 public class Calculadora extends JFrame{
     private Container container;
@@ -31,7 +32,12 @@ public class Calculadora extends JFrame{
         "4", "5", "6", "-", 
         "1", "2", "3", "x",
         "0", "backspace", "=", "/"};
-    Icon backspaceIcon = new ImageIcon("figuras/backspace-figura.png");
+    private Color cor01 = new Color(110, 110, 110);
+    private Color cor02 = new Color(230, 230, 230);
+    private Color cor03 = new Color(185, 185, 185);
+    private Color cor04 = new Color(205, 205, 205);
+    private Color cor05 = new Color(167, 199, 204);
+    private Icon backspaceIcon, equalIcon;
     private int valor1, valor2;
     private String operador;
     
@@ -40,40 +46,52 @@ public class Calculadora extends JFrame{
         container = getContentPane();
         container.setLayout(new BorderLayout());
         painelDeDisplay = new JPanel(new BorderLayout());
-        painelDeDisplay.setBorder(BorderFactory.createEmptyBorder(10, 15, 5, 15));
+        painelDeDisplay.setBorder(BorderFactory.createEmptyBorder(10, 15, 10, 15));
+        painelDeDisplay.setBackground(cor01);
         container.add(painelDeDisplay, BorderLayout.NORTH);
         txtDisplay = new JTextArea(1, 12);
         txtDisplay.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
+        txtDisplay.setBackground(cor02);
         txtDisplay.setFont(new Font("SansSerif", Font.PLAIN, 35));
         txtDisplay.setLineWrap(true);
         txtDisplay.setEditable(false);
         painelDeDisplay.add(txtDisplay, BorderLayout.CENTER);
         painelDeBotoes = new JPanel(new GridLayout(4, 4, 5, 5));
         painelDeBotoes.setBorder(BorderFactory.createEmptyBorder(5, 15, 15, 15));
+        painelDeBotoes.setBackground(cor03);
+        backspaceIcon = new ImageIcon("figuras/backspace-figura.png");
+        equalIcon = new ImageIcon("figuras/equal-sign.png");
         container.add(painelDeBotoes, BorderLayout.CENTER);
         
         for(int pos=0; pos<botoes.length;pos++){
             switch (pos) {
                 case 3:
                     botoes[pos] = new JButton(nomes[pos]);
+                    botoes[pos].setBackground(cor05);
                     break;
                 case 7:
                     botoes[pos] = new JButton(nomes[pos]);
+                    botoes[pos].setBackground(cor05);
                     break; 
                 case 11:
                     botoes[pos] = new JButton(nomes[pos]);
+                    botoes[pos].setBackground(cor05);
                     break;
                 case 13:
                     botoes[pos] = new JButton(backspaceIcon);
+                    botoes[pos].setBackground(cor04);
                     break;
                 case 14:
-                    botoes[pos] = new JButton(nomes[pos]);
+                    botoes[pos] = new JButton(equalIcon);
+                    botoes[pos].setBackground(cor04);
                     break;
                 case 15:
                     botoes[pos] = new JButton(nomes[pos]);
+                    botoes[pos].setBackground(cor05);
                     break;
                 default:
                     botoes[pos] = new JButton(nomes[pos]);
+                    botoes[pos].setBackground(cor04);
             }
         }
         
