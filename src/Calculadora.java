@@ -36,7 +36,6 @@ public class Calculadora extends JFrame{
     private Color cor02 = new Color(230, 230, 230);
     private Color cor03 = new Color(185, 185, 185);
     private Color cor04 = new Color(205, 205, 205);
-    private Color cor05 = new Color(180, 190, 201);
     private Icon backspaceIcon, equalIcon;
     private int valor1, valor2;
     private String operador;
@@ -67,15 +66,15 @@ public class Calculadora extends JFrame{
             switch (pos) {
                 case 3:
                     botoes[pos] = new JButton(nomes[pos]);
-                    botoes[pos].setBackground(cor05);
+                    botoes[pos].setBackground(cor04);
                     break;
                 case 7:
                     botoes[pos] = new JButton(nomes[pos]);
-                    botoes[pos].setBackground(cor05);
+                    botoes[pos].setBackground(cor04);
                     break; 
                 case 11:
                     botoes[pos] = new JButton(nomes[pos]);
-                    botoes[pos].setBackground(cor05);
+                    botoes[pos].setBackground(cor04);
                     break;
                 case 13:
                     botoes[pos] = new JButton(backspaceIcon);
@@ -87,7 +86,7 @@ public class Calculadora extends JFrame{
                     break;
                 case 15:
                     botoes[pos] = new JButton(nomes[pos]);
-                    botoes[pos].setBackground(cor05);
+                    botoes[pos].setBackground(cor04);
                     break;
                 default:
                     botoes[pos] = new JButton(nomes[pos]);
